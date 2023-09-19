@@ -3,6 +3,14 @@ import subprocess
 import glob
 
 
+def latex_escape(string):
+    group1 = '&%$#_{}'
+    group2 = '~^'
+    for char in group1:
+        string = string.replace(char, '\\'+char)
+    for char in group2:
+        string = string.replace(char, '\\'+char+'{}')
+    return string
 def determine_columns(n, min_):
     ## Determines the number of columns in which n submissions ought to be displayed.
     ## Maximally square but without being more columns than rows or fewer than min_ columns.

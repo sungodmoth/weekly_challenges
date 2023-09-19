@@ -94,7 +94,7 @@ advdate
     width=#2cm,
     height=#3cm,
     keepaspectratio] {
-                    Images/Sub_#1
+                    Images/Glyph_#1
                 }
 	}
 }
@@ -396,7 +396,7 @@ WithShadow/.style={
         % INVISIBLE SETUP FOR CENTERING THE WHOLE BANNER
         \begin{scope}[transparent]
             \node (nametag) at (0,-5.5) [rectangle, draw, inner sep=0, fontscale=40] {
-                \includegraphics[height=1.5cm]{Images/#3}\itshape\bfseries{~~#3}};
+                \includegraphics[height=1.5cm]{Images/pfp/#3}\itshape\bfseries{~~#3}};
             \draw (nametag.north west)++(.75,-.75) circle (.75cm) node (pfp) {};
         \end{scope}
 
@@ -406,7 +406,7 @@ WithShadow/.style={
         % PROFILE PICTURE
         \begin{scope}
             \draw [draw=none,clip] (pfp) circle (.75cm);
-            \node at (pfp) {\includegraphics[height=1.5cm]{Images/#3}};
+            \node at (pfp) {\includegraphics[height=1.5cm]{Images/pfp/#3}};
         \end{scope}
     
     \end{tikzpicture}
@@ -429,7 +429,7 @@ WithShadow/.style={
 
         % ICON
         \node at (canvas.north) [fill, White, circle, minimum size=2.9cm] {};
-        \node at (canvas.north) {\includegraphics[height=1.8cm]{Images/GA_icon}};
+        \node at (canvas.north) {\includegraphics[height=1.8cm]{GA_icon}};
 
         % TITLE AND SUBTITLE
         \node (title) at (canvas.north) [Pear, anchor=north, yshift=-1cm, fontscale=30] {\itshape\bfseries#5};
@@ -495,7 +495,7 @@ WithShadow/.style={
 	% \node (badge) at (whitebanner.west) [yshift=-.1cm, \ThisWeekColor, fontscale=##5, align=center] {\bfseries#7};
 
 	% ROUND G&A "FI" ICON ON THE RIGHT
-	\node (icon) at (colorbanner.east) [anchor=east] {\includegraphics [height=1cm] {Images/GA_logo}};
+	\node (icon) at (colorbanner.east) [anchor=east] {\includegraphics [height=1cm] {GA_logo}};
 
 	% CENTERED TITLE AND SUBTITLE (DATE) ON THE BANNER
 	\node (title) at ($(badge.east)!.5!(icon.west)$) [White, fontscale=20] {\itshape \bfseries #6};
@@ -608,7 +608,7 @@ WithShadow/.style={
 	\node (badge) at (whitebanner.west) [#8, minimum size=3cm, fontscale=##5, line width=.2cm, blur shadow={shadow blur extra rounding=1pt, shadow xshift=.1cm, shadow yshift=-.0375cm, shadow blur radius=.15cm, shadow blur steps=25}, yshift=-.1cm, fontscale=##5, align=center] {\bfseries~~#7~~};
 
 	% ROUND G&A "FI" ICON ON THE RIGHT
-	\node (icon) at (colorbanner.east) [anchor=east] {\includegraphics [height=1cm] {Images/GA_logo}};
+	\node (icon) at (colorbanner.east) [anchor=east] {\includegraphics [height=1cm] {GA_logo}};
 
 	% CENTERED TITLE AND SUBTITLE (DATE) ON THE BANNER
 	\node (title) at ($(badge.east)!.5!(icon.west)$) [White, fontscale=20] {\itshape \bfseries #6};

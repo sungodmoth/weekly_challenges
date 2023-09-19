@@ -145,7 +145,7 @@ fr"""
 """)
         ####################GLYPH_POLL########################
         if args.subcommand == "glyph_poll":
-            numsubs = number_of_submissions("Sub")
+            numsubs = number_of_submissions("Glyph")
             f.writelines(
 fr"""
 \def\ThisWeekGlyph{{{match_and_format_font(args.glyph, fonts, args.font, args.size, 60, args.verbose)}}}
@@ -171,7 +171,7 @@ fr"""
         if args.subcommand == "glyph_first":
             f.writelines(
 fr"""
-\def\GlyphWinnerFirst{{{args.winner}}}
+\def\GlyphWinnerFirst{{{latex_escape(args.winner)}}}
 \begin{{document}}
 \GlyphChallengeFirst
 \end{{document}}
@@ -179,7 +179,7 @@ fr"""
         if args.subcommand == "glyph_second":
             f.writelines(
 fr"""
-\def\GlyphWinnerSecond{{{args.winner}}}
+\def\GlyphWinnerSecond{{{latex_escape(args.winner)}}}
 \begin{{document}}
 \GlyphChallengeSecond
 \end{{document}}
@@ -187,7 +187,7 @@ fr"""
         if args.subcommand == "glyph_third":
             f.writelines(
 fr"""
-\def\GlyphWinnerThird{{{args.winner}}}
+\def\GlyphWinnerThird{{{latex_escape(args.winner)}}}
 \begin{{document}}
 \GlyphChallengeThird
 \end{{document}}
@@ -196,7 +196,7 @@ fr"""
         if args.subcommand == "ambigram_first":
             f.writelines(
 fr"""
-\def\AmbiWinnerFirst{{{args.winner}}}
+\def\AmbiWinnerFirst{{{latex_escape(args.winner)}}}
 \begin{{document}}
 \AmbigramChallengeFirst
 \end{{document}}
@@ -204,7 +204,7 @@ fr"""
         if args.subcommand == "ambigram_second":
             f.writelines(
 fr"""
-\def\AmbiWinnerSecond{{{args.winner}}}
+\def\AmbiWinnerSecond{{{latex_escape(args.winner)}}}
 \begin{{document}}
 \AmbigramChallengeSecond
 \end{{document}}
@@ -212,7 +212,7 @@ fr"""
         if args.subcommand == "ambigram_third":
             f.writelines(
 fr"""
-\def\AmbiWinnerThird{{{args.winner}}}
+\def\AmbiWinnerThird{{{latex_escape(args.winner)}}}
 \begin{{document}}
 \AmbigramChallengeThird
 \end{{document}}
