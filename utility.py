@@ -4,12 +4,15 @@ import glob
 
 
 def latex_escape(string):
-    group1 = '&%$#_{}'
-    group2 = '~^'
+    ## Escapes strings so that they can be used in LaTeX. Currently only escapes _,
+    ## because the others seem to cause problems in filenames even if escaped.
+    #group1 = '&%$#_{}'
+    group1 = '_'
+    #group2 = '~^'
     for char in group1:
         string = string.replace(char, '\\'+char)
-    for char in group2:
-        string = string.replace(char, '\\'+char+'{}')
+    #for char in group2:
+    #    string = string.replace(char, '\\'+char+'{}')
     return string
 def determine_columns(n, min_):
     ## Determines the number of columns in which n submissions ought to be displayed.
