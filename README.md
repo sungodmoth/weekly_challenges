@@ -1,4 +1,4 @@
-# generate_image.py
+# weekly_challenges.py
 
 Generates challenge-related images for the Glyphs and Alphabets discord server. Assumes a Linux environment, and invokes `pdftoppm`, `convert` (part of `imagemagick`), `lualatex` and `fc-match` (for local font information). 
 
