@@ -39,8 +39,8 @@ Glyph submissions are pulled from the `Images` directory as explained above. The
 >>> weekly_challenges.py glyph_third nope
 ```
 Winning submissions are pulled from the appropriately named files in `Images` as explained above, and user profile pictures are likewise pulled from the images in `Images/pfp` with the same filenames as the usernames you pass in.
-<div align=center><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/cad0da8e-2757-4cb6-9c06-bb0456d2cb1e" width="600"/></div>
-<div align=center><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/25b41401-176b-435b-98c4-0d81ecf82f65" style="margin-right: 6px" width="600"/><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/8b32b52a-03be-4d6b-81b0-15130b6bb2eb" width="600"/></div>
+<div align=center><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/cad0da8e-2757-4cb6-9c06-bb0456d2cb1e" width="600" style="display: inline-block; margin: 0px auto" /></div>
+<div align=center width="600"><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/25b41401-176b-435b-98c4-0d81ecf82f65" width="50%" /><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/8b32b52a-03be-4d6b-81b0-15130b6bb2eb" width="50%" /></div>
 
 ```
 >>> weekly_challenges.py glyph_suggestions a 木 🐱 ꁱ 爨 ꖵ さ
