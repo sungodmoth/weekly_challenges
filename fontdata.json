@@ -2,12 +2,12 @@
     "fonts": [{
             "name": "STIXTwoText",
             "load_as": "",
-            "includes_excludes": ["-370-3FF", "-400-4FF", "-500-52F", "-1F00-1FFF"]
+            "excludes": ["370-3FF", "400-4FF", "500-52F", "1F00-1FFF"]
         }, {
             "name": "Noto Serif"
         }, {
             "name": "BabelStone Han",
-            "includes_excludes": ["-0-2E7F", "-3040-309F"]
+            "excludes": ["0-2E7F", "3040-30FF"]
         }, {
             "name": "Twemoji Mozilla",
             "size_percentage": 90,
