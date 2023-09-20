@@ -70,6 +70,15 @@ advdate
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\GALogo}[3]{%
+  \resizebox{#1}{!}{%
+    \begin{tikzpicture}%
+        \path[fill=#2] (4.19998, 4.19998) circle (3.75000cm);%
+        \path[fill=#3] (5.81278, 8.01788) .. controls (5.31708, 8.22758) and (4.77208, 8.34348) .. (4.19998, 8.34348) .. controls (2.48368, 8.34348) and (1.01108, 7.29998) .. (.38218, 5.81278) .. controls (.17248, 5.31718) and (.05648, 4.77208) .. (.05648, 4.19998) .. controls (.05648, 1.91168) and (1.91158, .05648) .. (4.19998, .05648) .. controls (5.91628, .05648) and (7.38888, 1.10008) .. (8.01788, 2.58718) .. controls (8.22758, 3.08288) and (8.34348, 3.62788) .. (8.34348, 4.19998) .. controls (8.34348, 5.91628) and (7.29998, 7.38888) .. (5.81278, 8.01788) -- cycle (5.46698, 6.76048) .. controls (5.43468, 6.78468) and (5.38618, 6.79678) .. (5.32148, 6.79678) .. controls (5.20028, 6.79678) and (5.09618, 6.76548) .. (5.00928, 6.70278) .. controls (4.88598, 6.61598) and (4.78288, 6.49268) .. (4.70018, 6.33308) .. controls (4.64548, 6.22998) and (4.56668, 5.99058) .. (4.46368, 5.61458) -- (4.41818, 5.45398) -- (5.19718, 5.45398) .. controls (5.47608, 5.45398) and (5.71248, 5.48228) .. (5.90658, 5.53888) -- (6.05808, 5.53888) -- (5.52158, 3.66248) .. controls (5.43258, 3.35338) and (5.38818, 3.17748) .. (5.38818, 3.13508) .. controls (5.38818, 3.10878) and (5.39628, 3.08658) .. (5.41238, 3.06838) .. controls (5.42858, 3.05018) and (5.44678, 3.04108) .. (5.46698, 3.04108) .. controls (5.50338, 3.04108) and (5.53978, 3.05628) .. (5.57618, 3.08658) .. controls (5.66908, 3.16338) and (5.77918, 3.29968) .. (5.90658, 3.49578) -- (6.00658, 3.43818) .. controls (5.82068, 3.12698) and (5.63568, 2.90668) .. (5.45188, 2.77738) .. controls (5.32658, 2.68848) and (5.18408, 2.64398) .. (5.02448, 2.64398) .. controls (4.89708, 2.64398) and (4.79708, 2.67838) .. (4.72438, 2.74708) .. controls (4.65168, 2.81578) and (4.61528, 2.90358) .. (4.61528, 3.01078) .. controls (4.61528, 3.09568) and (4.64148, 3.22698) .. (4.69408, 3.40488) -- (5.19718, 5.09628) -- (4.33638, 5.09628) -- (3.99078, 3.74738) .. controls (3.81698, 3.06638) and (3.65478, 2.58338) .. (3.50428, 2.29848) .. controls (3.35367, 2.01348) and (3.17038, 1.79068) .. (2.95407, 1.63008) .. controls (2.73787, 1.46938) and (2.49837, 1.38898) .. (2.23567, 1.38898) .. controls (2.05177, 1.38898) and (1.91887, 1.42138) .. (1.83707, 1.48608) .. controls (1.75527, 1.55078) and (1.71427, 1.62848) .. (1.71427, 1.71938) .. controls (1.71427, 1.80238) and (1.74717, 1.87408) .. (1.81277, 1.93468) .. controls (1.87847, 1.99528) and (1.96387, 2.02558) .. (2.06897, 2.02558) .. controls (2.15997, 2.02558) and (2.23117, 2.00188) .. (2.28267, 1.95438) .. controls (2.33417, 1.90698) and (2.35997, 1.84778) .. (2.35997, 1.77708) .. controls (2.35997, 1.71648) and (2.34077, 1.66388) .. (2.30237, 1.61948) -- (2.27207, 1.57698) .. controls (2.27207, 1.56688) and (2.27607, 1.55878) .. (2.28417, 1.55278) .. controls (2.30237, 1.54068) and (2.32457, 1.53458) .. (2.35087, 1.53458) .. controls (2.43567, 1.53458) and (2.52867, 1.61338) .. (2.62977, 1.77098) .. controls (2.69237, 1.86598) and (2.78637, 2.15698) .. (2.91167, 2.64398) -- (3.54517, 5.09628) -- (3.12387, 5.09628) -- (3.21787, 5.45398) .. controls (3.38757, 5.44988) and (3.50827, 5.46958) .. (3.58007, 5.51308) .. controls (3.65177, 5.55658) and (3.72497, 5.65198) .. (3.79987, 5.79958) .. controls (4.00797, 6.21378) and (4.21407, 6.49378) .. (4.41817, 6.63918) .. controls (4.69707, 6.83518) and (5.02137, 6.93328) .. (5.39127, 6.93328) .. controls (5.64177, 6.93328) and (5.82417, 6.88878) .. (5.93837, 6.79988) .. controls (6.05247, 6.71088) and (6.10957, 6.60488) .. (6.10957, 6.48158) .. controls (6.10957, 6.38048) and (6.07577, 6.29618) .. (6.00807, 6.22848) .. controls (5.94037, 6.16068) and (5.85797, 6.12688) .. (5.76097, 6.12688) .. controls (5.66807, 6.12688) and (5.58927, 6.15518) .. (5.52457, 6.21178) .. controls (5.45987, 6.26838) and (5.42757, 6.33098) .. (5.42757, 6.39978) .. controls (5.42757, 6.45428) and (5.44377, 6.51388) .. (5.47607, 6.57858) .. controls (5.50037, 6.62298) and (5.51247, 6.65628) .. (5.51247, 6.67858) .. controls (5.51247, 6.70688) and (5.49727, 6.73418) .. (5.46697, 6.76048) -- cycle;%
+    \end{tikzpicture}%
+  }%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand\setglyphlabel[2]{\expandafter\def\csname GlyphLabel#1\endcsname{#2}}
@@ -429,7 +438,10 @@ WithShadow/.style={
 
         % ICON
         \node at (canvas.north) [fill, White, circle, minimum size=2.9cm] {};
-        \node at (canvas.north) {\includegraphics[height=1.8cm]{GA_icon}};
+        \node at (canvas.north) {
+            %\includegraphics[height=1.8cm]{GA_icon}
+            \GALogo{1.8cm}{Black}{Green}
+            };
 
         % TITLE AND SUBTITLE
         \node (title) at (canvas.north) [Pear, anchor=north, yshift=-1cm, fontscale=30] {\itshape\bfseries#5};
@@ -495,7 +507,10 @@ WithShadow/.style={
 	% \node (badge) at (whitebanner.west) [yshift=-.1cm, \ThisWeekColor, fontscale=##5, align=center] {\bfseries#7};
 
 	% ROUND G&A "FI" ICON ON THE RIGHT
-	\node (icon) at (colorbanner.east) [anchor=east] {\includegraphics [height=1cm] {GA_logo}};
+	\node (icon) at (colorbanner.east) [anchor=east] {
+        %\includegraphics [height=1cm] {GA_logo}
+        \GALogo{1cm}{none}{White}
+        };
 
 	% CENTERED TITLE AND SUBTITLE (DATE) ON THE BANNER
 	\node (title) at ($(badge.east)!.5!(icon.west)$) [White, fontscale=20] {\itshape \bfseries #6};
@@ -608,7 +623,10 @@ WithShadow/.style={
 	\node (badge) at (whitebanner.west) [#8, minimum size=3cm, fontscale=##5, line width=.2cm, blur shadow={shadow blur extra rounding=1pt, shadow xshift=.1cm, shadow yshift=-.0375cm, shadow blur radius=.15cm, shadow blur steps=25}, yshift=-.1cm, fontscale=##5, align=center] {\bfseries~~#7~~};
 
 	% ROUND G&A "FI" ICON ON THE RIGHT
-	\node (icon) at (colorbanner.east) [anchor=east] {\includegraphics [height=1cm] {GA_logo}};
+	\node (icon) at (colorbanner.east) [anchor=east] {
+        %\includegraphics [height=1cm] {GA_logo}
+        \GALogo{1cm}{none}{White}
+        };
 
 	% CENTERED TITLE AND SUBTITLE (DATE) ON THE BANNER
 	\node (title) at ($(badge.east)!.5!(icon.west)$) [White, fontscale=20] {\itshape \bfseries #6};
