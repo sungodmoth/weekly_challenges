@@ -24,14 +24,14 @@ The following examples cover all of the glyph challenge-related commands, and th
 ```
 >>> weekly_challenges.py glyph_announcement 🐱
 ```
-Date and background colour (which is on a weekly cycle) are automatically determined. For this example character, the font `Twemoji Mozilla` is automatically selected and will be used so long as it is present on the system. The font and font size can be overriden with the `--font` and `--size` flags, in this subcommand and several others.
-<div align=center><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/5bb8eef3-66ba-4669-993b-82f0692337a1" width="600"/></div>
+Date and background colour (which is on a weekly cycle) are automatically determined. For this example character, the font `Noto Emoji` is automatically selected and will be used so long as it is present on the system (if you get an error with this particular character, it's likely that `Noto Color Emoji`, which is more widely installed but will not work here, is being chosen instead). The font and font size can be overriden with the `--font` and `--size` flags, in this subcommand and several others.
+<div align=center><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/0b4f65bd-26c7-4dbf-9133-c25dc66aecdf" width="600"/></div>
 
 ```
 >>> weekly_challenges.py glyph_poll 🐱
 ```
 Glyph submissions are pulled from the `Images` directory as explained above. The number of columns, in this and other grid-related subcommands, is determined automatically but can be overriden by `--cols`.
-<div align=center><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/905a53ef-b8da-4ccd-b699-cc47696c4660" width="600"/></div>
+<div align=center><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/c64cd8f7-11ef-482e-af40-78b39697999f" width="600"/></div>
 
 ```
 >>> weekly_challenges.py glyph_first dogg 
@@ -43,10 +43,10 @@ Winning submissions are pulled from the appropriately named files in `Images` as
 <div align=center width="600"><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/25b41401-176b-435b-98c4-0d81ecf82f65" width="50%" /><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/8b32b52a-03be-4d6b-81b0-15130b6bb2eb" width="50%" /></div>
 
 ```
->>> weekly_challenges.py glyph_suggestions a 木 🐱 ꁱ 爨 ꖵ さ
+>>> weekly_challenges.py glyph_suggestions a 木 🐱 ꁱ 爨 ꖵ さ ক্ষ
 ```
 Suggestions are separated by spaces, and each one has a font auto-selected. Overriding these fonts and their sizes is not yet supported.
-<div align=center><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/cc78dfcb-a739-45e0-b36a-f2802016b82e" width="600"/></div>
+<div align=center><img src="https://github.com/sungodmoth/weekly_challenges/assets/128005279/e5f0d8cd-caca-4d1f-827e-d2255d3710e8" width="600"/></div>
 
 ## Font Selection
 Automatic font selection proceeds according to the file `font_data.json`, which contains a list of fonts. Each font must be present on the system (as a `.ttf` or `.otf` in the relevant system directories, not just within the LaTeX installation), so that the `fontconfig` tool `fc-match` can be used to automatically determine which glyphs it supports (the exception is STIX Two Text, the main font of the document, whose glyph support has been hardcoded for convenience as it is rarely present outside of LaTeX).

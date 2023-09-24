@@ -9,9 +9,8 @@
             "name": "BabelStone Han",
             "excludes": ["0-2E7F", "3040-30FF"]
         }, {
-            "name": "Twemoji Mozilla",
-            "size_percentage": 90,
-            "load_as": "\\setmainfont[Renderer=HarfBuzz]{TwemojiMozilla.ttf}"
+            "name": "Noto Emoji",
+            "size_percentage": 90
         }, {
             "name": "Noto Serif CJK JP"
         }, {

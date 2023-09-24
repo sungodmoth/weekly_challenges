@@ -257,7 +257,7 @@ fr"""
 """)
     ##################################COMPILATION##########################################
     print("Compiling LaTeX code...")
-    process = subprocess.Popen(["lualatex", "-interaction=nonstopmode", "weekly_challenges.tex"],
+    process = subprocess.Popen(["xelatex", "-interaction=nonstopmode", "weekly_challenges.tex"],
                                 stdout=subprocess.PIPE,
                                 stderr=subprocess.PIPE,
                                 universal_newlines=True)
