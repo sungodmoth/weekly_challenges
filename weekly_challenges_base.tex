@@ -175,41 +175,14 @@ advdate
     }
 }
 
-\def\GlyphChallengeWinners{
-    \foreach \x/\y/\z in {
-        GlyphWinnerFirst/\ThisWeekColor/\GlyphWinnerFirst,
-        GlyphWinnerSecond/\NextWeekColor/\GlyphWinnerSecond,
-        GlyphWinnerThird/\OtherColor/\GlyphWinnerThird
-    }{
-        \ChallengeWinners{\x}{\y}{\z}{0}{12}
-    }
-}
 \def\GlyphChallengeFirst{
-    \foreach \x/\y/\z in {
-        GlyphWinnerFirst/\ThisWeekColor/\GlyphWinnerFirst
-        %GlyphWinnerSecond/\NextWeekColor/\GlyphWinnerSecond,
-        %GlyphWinnerThird/\OtherColor/\GlyphWinnerThird
-    }{
-        \ChallengeWinners{\x}{\y}{\z}{0}{12}
-    }
+    \ChallengeWinners{GlyphWinnerFirst}{\ThisWeekColor}{\GlyphWinnerFirst}{0}{12}
 }
 \def\GlyphChallengeSecond{
-    \foreach \x/\y/\z in {
-        %GlyphWinnerFirst/\ThisWeekColor/\GlyphWinnerFirst,
-        GlyphWinnerSecond/\NextWeekColor/\GlyphWinnerSecond
-        %GlyphWinnerThird/\OtherColor/\GlyphWinnerThird
-    }{
-        \ChallengeWinners{\x}{\y}{\z}{0}{12}
-    }
+    \ChallengeWinners{GlyphWinnerSecond}{\NextWeekColor}{\GlyphWinnerSecond}{0}{12}
 }
 \def\GlyphChallengeThird{
-    \foreach \x/\y/\z in {
-        %GlyphWinnerFirst/\ThisWeekColor/\GlyphWinnerFirst,
-        %GlyphWinnerSecond/\NextWeekColor/\GlyphWinnerSecond,
-        GlyphWinnerThird/\OtherColor/\GlyphWinnerThird
-    }{
-        \ChallengeWinners{\x}{\y}{\z}{0}{12}
-    }
+    \ChallengeWinners{GlyphWinnerThird}{\OtherColor}{\GlyphWinnerThird}{0}{12}
 }
 
 \newcommand{\GlyphChallengeShowcase}[2]{
@@ -259,41 +232,15 @@ advdate
     }
 }
 
-\def\AmbigramChallengeWinners{
-    \foreach \x/\y/\z in {
-        AmbiWinnerFirst/Pink/\AmbiWinnerFirst,
-        AmbiWinnerSecond/Cyan/\AmbiWinnerSecond,
-        AmbiWinnerThird/Red/\AmbiWinnerThird
-    }{
-        \ChallengeWinners{\x}{\y}{\z}{1}{15}
-    }
-}
+
 \def\AmbigramChallengeFirst{
-    \foreach \x/\y/\z in {
-        AmbiWinnerFirst/Pink/\AmbiWinnerFirst
-        %AmbiWinnerSecond/Cyan/\AmbiWinnerSecond,
-        %AmbiWinnerThird/Red/\AmbiWinnerThird
-    }{
-        \ChallengeWinners{\x}{\y}{\z}{1}{15}
-    }
+    \ChallengeWinners{AmbiWinnerFirst}{Pink}{\AmbiWinnerFirst}{1}{15}
 }
 \def\AmbigramChallengeSecond{
-    \foreach \x/\y/\z in {
-        %AmbiWinnerFirst/Pink/\AmbiWinnerFirst,
-        AmbiWinnerSecond/Cyan/\AmbiWinnerSecond
-        %AmbiWinnerThird/Red/\AmbiWinnerThird
-    }{
-        \ChallengeWinners{\x}{\y}{\z}{1}{15}
-    }
+    \ChallengeWinners{AmbiWinnerSecond}{Cyan}{\AmbiWinnerSecond}{1}{15}
 }
 \def\AmbigramChallengeThird{
-    \foreach \x/\y/\z in {
-        %AmbiWinnerFirst/Pink/\AmbiWinnerFirst,
-        %AmbiWinnerSecond/Cyan/\AmbiWinnerSecond,
-        AmbiWinnerThird/Red/\AmbiWinnerThird
-    }{
-        \ChallengeWinners{\x}{\y}{\z}{1}{15}
-    }
+    \ChallengeWinners{AmbiWinnerThird}{Red}{\AmbiWinnerThird}{1}{15}
 }
 
 \newcommand{\AmbigramChallengeShowcase}[2]{

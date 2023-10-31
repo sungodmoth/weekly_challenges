@@ -14,12 +14,12 @@ def latex_escape(string):
     #for char in group2:
     #    string = string.replace(char, '\\'+char+'{}')
     return string
-def determine_columns(n, min_):
+def determine_columns(n, min_, max_=None):
     ## Determines the number of columns in which n submissions ought to be displayed.
     ## Maximally square but without being more columns than rows or fewer than min_ columns.
     for i in range(min_,n):
         if -(n//-(i+1)) < i + 1:
-            return i
+            return i if not max_ else min(i, max_)
     return min_
 
 def font_size_format(fontname, size):

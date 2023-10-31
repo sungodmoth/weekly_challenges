@@ -252,7 +252,7 @@ fr"""
 }}
 \begin{{document}}
 \glyphlabels
-\AmbigramPoll{{{args.cols or determine_columns(i,3)}}}
+\AmbigramPoll{{{args.cols or determine_columns(i,3, max_=3)}}}
 \end{{document}}
 """)
     ##################################COMPILATION##########################################
