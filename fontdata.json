@@ -12,9 +12,15 @@
             "name": "Noto Emoji",
             "size_percentage": 90
         }, {
+            "name": "BabelStone Tibetan"
+        }, {
+            "name": "Tangut Yinchuan"
+        }, {
             "name": "Noto Serif CJK JP"
         }, {
             "name": "Noto Serif CJK KR"
+        }, {
+            "name": "Noto Sans Adlam"
         }, {
             "name": "Noto Sans Arabic"
         }, {
@@ -82,7 +88,7 @@
         }, {
             "name": "Noto Sans Gunjala"
         }, {
-            "name": "Noto Sans Gurumukhi"
+            "name": "Noto Sans Gurmukhi"
         }, {
             "name": "Noto Sans Hanifi Rohingya"
         }, {
