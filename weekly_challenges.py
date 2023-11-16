@@ -99,13 +99,13 @@ if __name__ == "__main__":
     #now modulo this to get the four-week colour cycle
     cycle_number = week_number % 4
     if cycle_number == 0:
-        week_colour = "Red"
-    elif cycle_number == 1:
         week_colour = "Blue"
-    elif cycle_number == 2:
+    elif cycle_number == 1:
         week_colour = "Pink"
-    else:
+    elif cycle_number == 2:
         week_colour = "Cyan"
+    else:
+        week_colour = "Red"
     date_formatted = args.date or date.strftime("%d/%m/%Y")
     ########################FILE STUFF##########################
     with open("weekly_challenges_base.tex", "r") as f:

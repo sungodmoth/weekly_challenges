@@ -16,6 +16,11 @@
         }, {
             "name": "Tangut Yinchuan"
         }, {
+            "name": "BabelStone Runic"
+        }, {
+            "name": "FreeSerif",
+            "excludes": ["530-2000"]
+        }, {
             "name": "Noto Serif CJK JP"
         }, {
             "name": "Noto Serif CJK KR"
@@ -76,7 +81,7 @@
         }, {
             "name": "Noto Sans Ethiopic"
         }, {
-            "name": "Noto Sans Georgian"
+            "name": "Noto Serif Georgian"
         }, {
             "name": "Noto Sans Glagolitic"
         }, {
@@ -140,6 +145,8 @@
             "name": "Noto Sans Lydian"
         }, {
             "name": "Noto Sans Mahajani"
+        }, {
+            "name": "Noto Serif Makasar"
         }, {
             "name": "Noto Sans Malayalam"
         }, {
