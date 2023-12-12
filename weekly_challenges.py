@@ -254,9 +254,10 @@ fr"""
         if args.subcommand == "ambigram_suggestions":
             suggestions_formatted = ""
             i = 0
-            for ambi in args.ambis:
-                i += 1
-                suggestions_formatted += fr"""\setpollambi{{{i}}}{{{match_and_format_font(ambi, fonts, None, None, 28, args.verbose)}}}
+            if args.ambis:
+                for ambi in args.ambis:
+                    i += 1
+                    suggestions_formatted += fr"""\setpollambi{{{i}}}{{{match_and_format_font(ambi, fonts, None, None, 28, args.verbose)}}}
     """
             else:
                 print("No arguments given; taking suggestions from ambigram_suggestions.txt...")
