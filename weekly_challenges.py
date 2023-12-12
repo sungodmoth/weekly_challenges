@@ -108,10 +108,10 @@ if __name__ == "__main__":
         week_colour = "Red"
     date_formatted = args.date or date.strftime("%d/%m/%Y")
     ########################FILE STUFF##########################
-    with open("weekly_challenges_base.tex", "r") as f:
-        contents = f.readlines()
-    with open("weekly_challenges.tex", "w") as f:
-        f.writelines(contents)
+    with open("weekly_challenges_base.tex", "r", encoding='utf8') as f:
+        contents = f.read()
+    with open("weekly_challenges.tex", "w", encoding='utf8') as f:
+        f.write(contents)
         f.writelines(
 fr"""
 \SetDate[{date_formatted}]
@@ -221,9 +221,23 @@ fr"""
         if args.subcommand == "glyph_suggestions":
             suggestions_formatted = ""
             i = 0
-            for glyph in args.glyphs:
-                i += 1
-                suggestions_formatted += fr"""\setpollglyph{{{i}}}{{{match_and_format_font(glyph, fonts, None, None, 40, args.verbose)}}}
+            if args.glyphs:
+                for glyph in args.glyphs:
+                    i += 1
+                    suggestions_formatted += fr"""\setpollglyph{{{i}}}{{{match_and_format_font(glyph, fonts, None, None, 40, args.verbose)}}}
+    """
+            else:
+                print("No arguments given; taking suggestions from glyph_suggestions.txt...")
+                with open("glyph_suggestions.txt", "r") as g:
+                    lines = g.readlines()
+                for line in lines:
+                    a = line.strip().split("\t")[::-1]
+                    glyph = (a or [None]).pop()
+                    size_override = (a or [None]).pop()
+                    font_override = (a or [None]).pop()
+                    if glyph:
+                        i += 1
+                        suggestions_formatted += fr"""\setpollglyph{{{i}}}{{{match_and_format_font(glyph, fonts, font_override, size_override, 40, args.verbose)}}}
     """
             f.writelines(
 fr"""
@@ -243,6 +257,19 @@ fr"""
             for ambi in args.ambis:
                 i += 1
                 suggestions_formatted += fr"""\setpollambi{{{i}}}{{{match_and_format_font(ambi, fonts, None, None, 28, args.verbose)}}}
+    """
+            else:
+                print("No arguments given; taking suggestions from ambigram_suggestions.txt...")
+                with open("ambigram_suggestions.txt", "r") as g:
+                    lines = g.readlines()
+                for line in lines:
+                    a = line.strip().split("\t")[::-1]
+                    ambi = (a or [None]).pop()
+                    size_override = (a or [None]).pop()
+                    font_override = (a or [None]).pop()
+                    if ambi:
+                        i += 1
+                        suggestions_formatted += fr"""\setpollambi{{{i}}}{{{match_and_format_font(ambi, fonts, font_override, size_override, 40, args.verbose)}}}
     """
             f.writelines(
 fr"""
