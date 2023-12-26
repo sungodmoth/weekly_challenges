@@ -2,7 +2,6 @@ import json
 import subprocess
 import glob
 
-
 def latex_escape(string):
     ## Escapes strings so that they can be used in LaTeX. Currently only escapes _,
     ## because the others seem to cause problems in filenames even if escaped.
@@ -54,6 +53,9 @@ def match_and_format_font(string, fonts, font_override, size_override, default_s
     
 def get_ranges(fontname):
     ## Given a font name, uses fontconfig to determine which glyph ranges it supports.
+    if fontname == "STIXTwoText":
+        #this case is hardcoded because STIX might not be present on the system as a ttf/otf
+        return [(32, 126), (160, 384), (392, 392), (400, 400), (402, 402), (405, 405), (409, 411), (414, 414), (416, 417), (421, 421), (426, 427), (429, 429), (431, 432), (437, 437), (442, 443), (446, 446), (448, 451), (478, 479), (496, 496), (506, 511), (536, 539), (545, 545), (552, 553), (564, 567), (592, 745), (748, 749), (759, 759), (768, 831), (838, 839), (844, 844), (857, 857), (860, 860), (864, 866), (894, 894), (900, 906), (908, 908), (910, 929), (931, 974), (976, 978), (981, 982), (984, 993), (1008, 1009), (1012, 1014), (1024, 1119), (1122, 1123), (1130, 1131), (1138, 1141), (1168, 1169), (7424, 7424), (7431, 7431), (7452, 7452), (7553, 7553), (7556, 7557), (7562, 7562), (7565, 7566), (7576, 7576), (7587, 7587), (7680, 7929), (8192, 8205), (8208, 8226), (8229, 8230), (8239, 8252), (8254, 8254), (8256, 8256), (8259, 8260), (8263, 8263), (8267, 8274), (8279, 8279), (8287, 8287), (8304, 8305), (8308, 8334), (8355, 8356), (8359, 8359), (8363, 8364), (8377, 8378), (8381, 8381), (8400, 8402), (8406, 8407), (8411, 8415), (8417, 8417), (8420, 8432), (8448, 8527), (8531, 8542), (8722, 8722), (8725, 8725), (9251, 9251), (9676, 9676), (42791, 42791), (42898, 42898), (64256, 64260)]
     process = subprocess.run(["fc-match", "--format='%{charset}\\n", fontname], capture_output=True)
     ranges = []
     for x in str(process.stdout)[3:][:-3].split(" "):
@@ -62,7 +64,14 @@ def get_ranges(fontname):
         ranges.append((int(a, 16), int(b, 16)))
     return ranges
 
-def parse_fonts():
+def get_all_ranges(fontdata):
+    ## Applies the above to all fonts in a json list, as parsed from fontdata.json
+    output = []
+    for font in fontdata:
+        output.append(get_ranges(font['name']))
+    return output
+
+def parse_fontdata():
     ## Parses font information from fontdata.json.
     with open("fontdata.json", "r") as f:
         return json.loads(f.read())["fonts"]
@@ -80,12 +89,7 @@ def match_font(string, fonts):
     ## Given a string and a list of fonts, in the format parsed from
     ## fontdata.json, finds the first font in the list which supports
     ## (and does not exclude) all of the characters in the string.
-    for font in fonts:
-        if font['name'] == "STIXTwoText":
-            #this case is hardcoded because STIX might not be present on the system as a ttf/otf
-            ranges = [(32, 126), (160, 384), (392, 392), (400, 400), (402, 402), (405, 405), (409, 411), (414, 414), (416, 417), (421, 421), (426, 427), (429, 429), (431, 432), (437, 437), (442, 443), (446, 446), (448, 451), (478, 479), (496, 496), (506, 511), (536, 539), (545, 545), (552, 553), (564, 567), (592, 745), (748, 749), (759, 759), (768, 831), (838, 839), (844, 844), (857, 857), (860, 860), (864, 866), (894, 894), (900, 906), (908, 908), (910, 929), (931, 974), (976, 978), (981, 982), (984, 993), (1008, 1009), (1012, 1014), (1024, 1119), (1122, 1123), (1130, 1131), (1138, 1141), (1168, 1169), (7424, 7424), (7431, 7431), (7452, 7452), (7553, 7553), (7556, 7557), (7562, 7562), (7565, 7566), (7576, 7576), (7587, 7587), (7680, 7929), (8192, 8205), (8208, 8226), (8229, 8230), (8239, 8252), (8254, 8254), (8256, 8256), (8259, 8260), (8263, 8263), (8267, 8274), (8279, 8279), (8287, 8287), (8304, 8305), (8308, 8334), (8355, 8356), (8359, 8359), (8363, 8364), (8377, 8378), (8381, 8381), (8400, 8402), (8406, 8407), (8411, 8415), (8417, 8417), (8420, 8432), (8448, 8527), (8531, 8542), (8722, 8722), (8725, 8725), (9251, 9251), (9676, 9676), (42791, 42791), (42898, 42898), (64256, 64260)]
-        else:
-            ranges = get_ranges(font['name'])
+    for (font, ranges) in fonts:
         for char in string:
             match = False
             for rnge in ranges:

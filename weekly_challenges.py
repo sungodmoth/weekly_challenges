@@ -88,7 +88,8 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     ##################################INJECTION############################################
-    fonts = parse_fonts()
+    fontdata = parse_fontdata()
+    fonts = list(zip(fontdata, get_all_ranges(fontdata)))
     #########################DATE###############################
     #current date in europe timezone
     date = datetime.datetime.now(tz=zoneinfo.ZoneInfo("Europe/Amsterdam")).date()
