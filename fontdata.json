@@ -21,9 +21,11 @@
             "name": "FreeSerif",
             "excludes": ["530-2000"]
         }, {
-            "name": "Noto Serif CJK JP"
+            "name": "Noto Serif CJK JP",
+            "load_as":"\\setmainfont{NotoSerifCJK}[Extension = {.ttc}, UprightFont = {*-Regular}, BoldFont = {*-SemiBold}]"
         }, {
-            "name": "Noto Serif CJK KR"
+            "name": "Noto Serif CJK KR",
+            "load_as":"\\setmainfont{NotoSerifCJK}[Extension = {.ttc}, UprightFont = {*-Regular}, BoldFont = {*-SemiBold}]"
         }, {
             "name": "Noto Sans Adlam"
         }, {
