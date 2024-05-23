@@ -1,6 +1,6 @@
 # weekly_challenges.py
 
-Generates challenge-related images for the Glyphs and Alphabets discord server. Assumes a Linux environment, and invokes `pdftoppm`, `convert` (part of `imagemagick`), `lualatex` and `fc-match` (for local font information). 
+Generates challenge-related images for the Glyphs and Alphabets discord server. Assumes a Linux environment, and invokes `pdftoppm`, `convert` (part of `imagemagick`), `xelatex` and `fc-match` (for local font information). 
 
 All images should be stored in a folder named `Images`. For quick testing, copy `sample_images` to `Images`. The usage examples below use the sample images. The format of this directory is as follows:
 
